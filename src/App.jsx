@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import { MyComponent } from './components/MyComponent'
-import { MyOtherComponent } from './components/MyOtherComponent'
 import { Search } from './components/Search'
 
 function App() {
@@ -11,11 +9,11 @@ function App() {
     <div className="App">
       <div>
         <h1>{title}</h1>
+        <img src="" />
+        <p>Based on <a href="https://www.tvmaze.com/">TV MAZE</a></p>
         {/* <button onClick={() => setTitle('Chocolatine')}>Révéler la vérité</button> */}
       </div>
       <Search />
-      {/* <MyOtherComponent />
-      <MyComponent /> */}
     </div>
   )
 }

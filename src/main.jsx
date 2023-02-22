@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom"
 import App from './App'
+import { Actor } from './components/Actor'
 import './index.css'
 import { Show } from './Show'
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/show/:id",
     element: <Show />
+  },
+  {
+    path: "/actor/:id",
+    element : <Actor />
   }
 ]);
 
