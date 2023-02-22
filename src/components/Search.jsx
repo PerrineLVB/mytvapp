@@ -13,7 +13,7 @@ export function Search() {
 
     return (
         <>
-            <input className="mb-5" placeholder="recherche" type="text" onChange={(e) => setQuery(e.target.value)} value={query} />
+            <input className="mb-5 w-50" placeholder="search your favourite tv show" type="text" onChange={(e) => setQuery(e.target.value)} value={query} />
             <div className="d-flex flex-wrap justify-content-center">
                 {results.map((result) => <Result key={result.show.id} details={result} />)}
             </div>

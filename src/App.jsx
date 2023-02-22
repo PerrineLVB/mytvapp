@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <div>
+          <img src="https://cdn-icons-png.flaticon.com/512/2593/2593966.png" className="w-50" />
         <h1>{title}</h1>
-        <img src="" />
         <p>Based on <a href="https://www.tvmaze.com/">TV MAZE</a></p>
         {/* <button onClick={() => setTitle('Chocolatine')}>Révéler la vérité</button> */}
       </div>
