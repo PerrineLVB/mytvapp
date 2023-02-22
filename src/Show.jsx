@@ -16,7 +16,7 @@ export function Show() {
     if (show) {
         return (
             <>
-                <h1>{show.name}</h1>
+                <h1>{show?.name}</h1>
                 <h4>Status : {show.status}</h4>
                 <h5>Premiered : {show.premiered}</h5>
                 <h6>First aired on <strong>{show.network?.name}</strong> in <strong>{show.network?.country?.name}</strong></h6>
@@ -27,9 +27,10 @@ export function Show() {
                 <div className='d-flex flex-column align-items-center mb-4'>
                     <h4>Starring :</h4>
                     <ul className="list-group w-40">
-                        {show._embedded.cast.map((star) => <li className="list-group-item" key={star}><Link to={"/actor/" + star.person.id} >{star.person.name}</Link> as <em>{star.character.name}</em></li>)}
+                        {show._embedded.cast.map((star) => <li className="list-group-item" key={star}><Link to={"/actor/" + star.person.id} >{star.person?.name}</Link> as <em>{star.character?.name}</em></li>)}
                     </ul>
                 </div>
+                <hr />
                 <Link to={"/"}>Back to homepage</Link>
             </>
         )
