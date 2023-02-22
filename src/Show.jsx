@@ -19,9 +19,12 @@ export function Show() {
                 <h1>{show?.name}</h1>
                 <h4>Status : {show.status}</h4>
                 <h5>Premiered : {show.premiered}</h5>
-                <h6>First aired on <strong>{show.network?.name}</strong> in <strong>{show.network?.country?.name}</strong></h6>
-                <h6>Rating : {show.rating.average}/10</h6>
-                {show.image != null ? <img src={show.image.medium} className="card-img-top w-25 rounded mb-4" alt="show image" /> : <img src="https://cdn-icons-png.flaticon.com/512/7734/7734301.png" alt="no image to be shown" className="card-img-top" />}
+                {show.network != null && <h6>First aired on <strong>{show.network?.name}</strong> in <strong>{show.network?.country?.name}</strong></h6>}
+                {show.rating.average != null && <h6>Rating : {show.rating.average}/10</h6>}
+                <a href={show.url}>See on TV MAZE</a>
+                <div>
+                    {show.image != null ? <img src={show.image.medium} className="card-img-top w-25 rounded mb-4" alt="show image" /> : <img src="https://cdn-icons-png.flaticon.com/512/7734/7734301.png" alt="no image to be shown" className="card-img-top" />}
+                </div>
                 <p>{show.genres?.map((genre) => <span key={genre} className="badge text-bg-warning mx-1">{genre}</span>)}</p>
                 <p>{parse(show.summary)}</p>
                 <div className='d-flex flex-column align-items-center mb-4'>

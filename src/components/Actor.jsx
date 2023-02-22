@@ -23,8 +23,8 @@ export function Actor() {
             <>
                 <h1>{actor.name}</h1>
                 {actor.image != null ? <img src={actor.image.medium} className="rounded" alt="actor picture" /> : <img src="https://cdn-icons-png.flaticon.com/512/7734/7734301.png" alt="no image to be shown" />}
-                <h4>Born {actor.birthday}</h4>
-                <h4 className="mb-4">From {actor.country?.name}</h4>
+                {actor.birthday != null && <h4>Born {actor.birthday}</h4>}
+                {actor.country != null && <h4 className="mb-4">From {actor.country?.name}</h4>}
                 <div className="mb-4">
                     <h3>Seen in :</h3>
                     {actorsShows.map((oneShow) => <p key={oneShow._embedded?.show?.id}><Link to={"/show/" + oneShow._embedded?.show?.id}>{oneShow._embedded?.show?.name}</Link></p>)}
